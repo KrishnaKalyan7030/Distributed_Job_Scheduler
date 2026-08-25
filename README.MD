@@ -187,7 +187,7 @@ queued/scheduled → claimed → running → completed
 | Worker concurrency | `asyncio.Semaphore` per queue | Enforces each queue's concurrency limit |
 | Recurring jobs | `croniter` | Correct cron-expression math |
 | Frontend | React + Vite + Tailwind | Fast to build, small enough not to need more |
-| AI failure analysis | Gemini API + rule-based fallback | Real AI when available, never breaks when it isn't |
+| AI failure analysis | Rule-based pattern matcher | Zero cost, zero latency, fully explainable, never fails during a demo |
 
 ---
 
