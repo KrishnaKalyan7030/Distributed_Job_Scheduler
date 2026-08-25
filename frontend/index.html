@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse — Job Scheduler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              base: '#0B0E14',
+              panel: '#12161F',
+              panel2: '#171C27',
+              border: '#232936',
+              muted: '#7B8496',
+              text: '#E7EAF0',
+              accent: '#E8A33D',
+              accent2: '#5B8DEF',
+              success: '#3DD68C',
+              danger: '#F0556B',
+              warn: '#E8A33D',
+              dead: '#8B5CF6',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['IBM Plex Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { background: #0B0E14; }
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: #12161F; }
+      ::-webkit-scrollbar-thumb { background: #232936; border-radius: 4px; }
+      @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+      .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+    </style>
+  </head>
+  <body class="font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
